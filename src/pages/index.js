@@ -40,7 +40,7 @@ export default function Home() {
       title: 'Narrator - AI RPG',
       text: 'Narrator - AI RPG',
       image: '/narratorBanner2.png',
-      explanation: 'An open concept AI Roleplaying game. Create a character, build a world, etc. Built from scratch, uses a variety of LLMs and image models.',
+      explanation: 'Any Story - Any Game. An AI Roleplaying game that supports a variety of LLMs, generates images during each game, and allows for user-generated-content. React frontend, Node Backend.',
       position: {top: 25, left: 25, mobileTop: 10, mobileLeft: 5 },     
        link: "https://playnarrator.com/"
     },
@@ -48,7 +48,7 @@ export default function Home() {
       title: 'Gifshift - AI Gifs',
       text: 'Gifshift - AI Gifs',
       image: '/dancingbear_shift.webp',
-      explanation: 'A GIF-2-GIF pipeline using an animatediff workflow. Powered by fal.ai. Frontend: nextjs with tailwind. Backend: node express server.',
+      explanation: 'Shift that GIF! A GIF-2-GIF pipeline using an animatediff workflow. Powered and supported by fal.ai. Nextjs frontend, Node backend.',
       position: { top: 35, left: 50, mobileTop: 55, mobileLeft: 35 },      
       link: "https://gifshift.xyz/"
     },

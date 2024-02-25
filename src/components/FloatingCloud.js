@@ -41,7 +41,7 @@
           </div>
         ) : (
           <div className="flex items-center justify-center bg-white bg-opacity-50 rounded-lg p-3 absolute w-full h-full">
-            <span className="text-sm text-black">{text}</span>
+            <span className="text-sm font-medium text-black">{text}</span>
           </div>
         )}
       </div>
