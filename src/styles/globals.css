@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* styles/globals.css */
+.ocean {
+  background: #0077b6; /* Tailwind's bg-blue-500 */
+  overflow: hidden;
+}
+
+.wave {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),  
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0.2) 80%,
+    rgba(255, 255, 255, 0) 100%
+
+  );
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 100%;
+  left: 0%;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  animation: moveWave 10s linear infinite;
+}
+
+.wave1 {
+  animation-delay: 0s;
+  bottom: 5%;
+}
+
+.wave2 {
+  animation-delay: -5s;
+  bottom: 10%;
+}
+.wave3 {
+  animation-delay: -7s;
+  bottom: 15%;
+}
+.wave4 {
+  animation-delay: -15s;
+  bottom: 20%;
+}
+
+@keyframes moveWave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  40% {
+    transform: translateX(0) translateY(-225%) scaleY(1);
+  }
+  100% {
+    transform: translateX(0) translateY(-450%) scaleY(1);
+  }
+}
+
+/* styles/globals.css */
+.cloud {
+  cursor: pointer;
+  width: 200px; /* Adjust based on your preference */
+  height: 120px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  background-color: #f8f9fa;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 100px; /* smaller cloud bump */
+  height: 100px;
+  top: -50px;
+  left: 30px;
+}
+
+.cloud::after {
+  width: 120px; /* bigger cloud bump */
+  height: 120px;
+  top: -60px;
+  right: 30px;
+}
+
+.cloud-image {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.cloud-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-weight: bold;
+}
+
+.expanded {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-preview {
+  width: 80%; /* Adjust based on your preference */
+  height: 80vh; /* Adjust based on your preference */
+  border: none;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.floating-cloud {
+  animation: floatAnimation 10s ease-in-out infinite;
+}
+
+@keyframes moveAndBob {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(-25%) translateY(-40px) scaleX(1); /* Adjust for slight bob */
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) scaleX(1); /* Flip and move to the furthest point */
+  }
+  53% {
+    transform: translateX(-50%) translateY(0) scaleX(-1); /* Flip and move to the furthest point */
+  }
+  75% {
+    transform: translateX(-25%) translateY(-40px) scaleX(-1); /* Bob on the way back */
+  }
+  97% {
+    transform: translateX(0) translateY(0) scaleX(-1);
+  }
+}
+
+.ship-container {
+  display: flex;
+  justify-content: flex-end;
+  overflow:visible; /* Prevents the ship from overflowing the container */
+  width: 100%; /* Ensure it takes full width to allow complete movement */
+  position:absolute;
+  left:0;
+}
+
+.ship {
+  animation: moveAndBob 20s ease-in-out infinite;
+  display: inline-block; /* Ensures the image is properly aligned for animation */
+  z-index: 21;
+  height:auto;
+  max-width: calc(min(40vw,450px));
+}
