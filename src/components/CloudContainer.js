@@ -62,6 +62,7 @@ const CloudContainer = ({ clouds }) => {
           title={pos.title}
           text={pos.text}
           image={pos.image}
+          cloud={pos.cloud}
           link={pos.link}
           explanation={pos.explanation}
           isMobile={isMobile}

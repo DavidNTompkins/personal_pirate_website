@@ -215,3 +215,23 @@ body {
   height:auto;
   max-width: calc(min(40vw,450px));
 }
+
+@keyframes sprite-animation {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -768px; /* This is 64px * 12 frames */
+  }
+}
+
+.sprite-container .speech-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust to align with the bottom of the bubble */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}

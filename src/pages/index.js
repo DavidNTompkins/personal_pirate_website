@@ -40,6 +40,7 @@ export default function Home() {
       title: 'Narrator - AI RPG',
       text: 'Narrator - AI RPG',
       image: '/narratorBanner2.png',
+      cloud: '/cloud.png',
       explanation: 'Any Story - Any Game. An AI Roleplaying game that supports a variety of LLMs, generates images during each game, and allows for user-generated-content. React frontend, Node Backend.',
       position: {top: 25, left: 25, mobileTop: 10, mobileLeft: 5 },     
        link: "https://playnarrator.com/"
@@ -48,6 +49,7 @@ export default function Home() {
       title: 'Gifshift - AI Gifs',
       text: 'Gifshift - AI Gifs',
       image: '/dancingbear_shift.webp',
+      cloud: '/cloud2.png',
       explanation: 'Shift that GIF! A GIF-2-GIF pipeline using an animatediff workflow. Powered and supported by fal.ai. Nextjs frontend, Node backend.',
       position: { top: 35, left: 50, mobileTop: 55, mobileLeft: 35 },      
       link: "https://gifshift.xyz/"
@@ -66,11 +68,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="relative h-screen w-screen overflow-hidden z-20">
       <CloudContainer clouds={cloudData} />
     <Sky />
     <MovingShip imagePath={"/ship.png"} className="left-0"/>
-     <Island />
+     <Island isMobile={isMobile} />
    <Ocean />
    </div>
   );
