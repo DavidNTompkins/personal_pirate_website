@@ -47,10 +47,11 @@ const MovingShip = ({ imagePath }) => {
           zIndex: '100',
           pointerEvents: 'auto', // Ensure the speech bubble can also be interacted with
         }} className="speech-bubble">
-          <a href="https://twitter.com/davidntompkins" target="_blank" rel="noopener noreferrer">Twitter</a><br />
-          <a href="https://discord.gg/Urpqg4MGKd" target="_blank" rel="noopener noreferrer">Discord</a><br />
-          <a href="https://davids-newsletter-4a95b9.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Newsletter</a>
+          <a href="https://twitter.com/davidntompkins" target="_blank" rel="noopener noreferrer">Twitter ➔</a><br />
+          <a href="https://discord.gg/Urpqg4MGKd" target="_blank" rel="noopener noreferrer">Discord ➔</a><br />
+          <a href="https://davids-newsletter-4a95b9.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Newsletter ➔</a>
         </div>
+
       )}
     </div>
   );
