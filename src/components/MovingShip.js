@@ -24,7 +24,7 @@ const MovingShip = ({ imagePath }) => {
 
   const handleShipClick = (event) => {
     event.stopPropagation();
-    setShowBubble(true);
+    setShowBubble(!showBubble);
   };
 
   return (

@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 export default function AnimatedSprite({ spriteSheetUrl, isMobile }) {
   const [showBubble, setShowBubble] = useState(false);
   const spriteRef = useRef(null); // Ref for the sprite element
+  const hasBeenClickedRef = useRef(false); // Ref to track if the bubble has been clicked
+
 
   useEffect(() => {
     // Function to handle clicks outside of the sprite to close the bubble
@@ -19,10 +21,22 @@ export default function AnimatedSprite({ spriteSheetUrl, isMobile }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showBubble]); // Effect depends on the showBubble state
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Only set showBubble to true if it has never been clicked
+      if (!hasBeenClickedRef.current) {
+        setShowBubble(true);
+      }
+    }, 3000); // Set to true after 5 seconds
+
+    return () => clearTimeout(timer); // Cleanup timer if component unmounts before 5 seconds
+  }, []); // Empty dependency array means this effect runs only once on mount
+
   // Toggle bubble visibility and prevent event propagation
   const toggleBubble = (event) => {
     event.stopPropagation();
     setShowBubble(!showBubble);
+    hasBeenClickedRef.current = true; // Indicate that the bubble has been interacted with
   };
 
   return (
