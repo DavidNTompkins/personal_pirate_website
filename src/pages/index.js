@@ -54,6 +54,15 @@ export default function Home() {
       position: { top: 35, left: 50, mobileTop: 55, mobileLeft: 35 },      
       link: "https://gifshift.xyz/"
     },
+    {
+      title: 'Work with me?',
+      text: 'Work with me?',
+      image: '/business_dave.png',
+      cloud: '/cloud5.png',
+      explanation: "I'm looking for teammates! Right now I'm planning Summer 2024 - looking for people who want to try building something big over a summer. Send me a dm!",
+      position: { top: 45, left: 30, mobileTop: 25, mobileLeft: 45 },      
+      link: "https://twitter.com/DavidNTompkins"
+    },
     /*{
       title: 'Project 1',
       text: 'Cloud 1',
