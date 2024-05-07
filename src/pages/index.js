@@ -59,7 +59,7 @@ export default function Home() {
       text: 'Work with me?',
       image: '/business_dave.png',
       cloud: '/cloud5.png',
-      explanation: "I'm looking for teammates! Right now I'm planning Summer 2024 - looking for people who want to try building something big over a summer. Send me a dm!",
+      explanation: "I'm always looking for colabs. If you're someone who likes making things (for or not for profit), hit me up! Right now I'm interested in play, toy/game, and using language models to solve useful problems.",
       position: { top: 45, left: 30, mobileTop: 25, mobileLeft: 45 },      
       link: "https://twitter.com/DavidNTompkins"
     },

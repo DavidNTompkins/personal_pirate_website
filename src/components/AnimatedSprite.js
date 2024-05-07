@@ -80,7 +80,7 @@ export default function AnimatedSprite({ spriteSheetUrl, isMobile }) {
           color: 'black',
           zIndex: '100',
         }} className="speech-bubble">
-          {"Ahoy! I'm David Tompkins, I'm a grad student at Cornell in developmental psychology. I also like making things with AI. Click the clouds for a few projects, or click the ship to get links to stay in touch."}
+          {"Ahoy! I'm David Tompkins, I'm a grad student at Cornell in developmental psychology. I also like making things with AI. Click the clouds for a few projects, or click the ship to stay in touch."}
         </div>
       )}
       <style jsx>{`

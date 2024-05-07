@@ -55,7 +55,7 @@ const CloudContainer = ({ clouds }) => {
 
 
   return (
-    <div className="absolute top-0 left-0 w-full" style={{ height: '50vh' }}>
+    <div className="absolute top-0 left-0 w-full" style={{ height: '50vh', zIndex: '101'  }}>
       {positions.map((pos, index) => (
         <FloatingCloud
           key={index}
