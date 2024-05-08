@@ -6,6 +6,7 @@ import Island from "@/components/Island";
 import CloudContainer from "@/components/CloudContainer";
 import MovingShip from "@/components/MovingShip";
 import { useState, useEffect } from "react";
+import PlayableImage from "@/components/PlayableImage";
 export default function Home() {
 
 
@@ -82,6 +83,7 @@ export default function Home() {
     <Sky />
     <MovingShip imagePath={"/ship.png"} className="left-0"/>
      <Island isMobile={isMobile} />
+     <PlayableImage isMobile={isMobile}/>
    <Ocean />
    </div>
   );
