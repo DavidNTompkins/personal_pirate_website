@@ -64,22 +64,38 @@ export default function Home() {
       position: { top: 45, left: 30, mobileTop: 25, mobileLeft: 45 },      
       link: "https://twitter.com/DavidNTompkins"
     },
-    /*{
-      title: 'Project 1',
-      text: 'Cloud 1',
-      image: '/path/to/image1.jpg',
-      explanation: 'An explanation of Project 1.',
-      position: { top:35, left:60 }, // Example movement
-    },*/
-
-    
-
     // Add more cloud data objects
   ];
 
+  const citations =  [{
+    title: 'Research',
+    description: 'Tompkins, D. N., Beckner, A. G., Bambha, V. P., LoBue, V., Oakes, L. M., & Casasola, M. (2024, March). Robots among children: Comparing child and GPT-4 performance on a global-local processing task. Poster presented at the meeting of the Cognitive Development Society, Pasadena, CA.',
+    link: ''    
+  },
+  {
+    title: 'Research',
+    description: 'Beckner, A. G., Katz, M., Tompkins, D. N., Voss, A. T., Winebrake, D., LoBue, V., Oakes, L. M., & Casasola, M. (2023). A Novel Approach to Assessing Infant and Child Mental Rotation. Journal of Intelligence, 11(8), Article 8. https://doi.org/10.3390/jintelligence11080168',
+    link: ''    
+  },
+  {
+    title: 'Research',
+    description: 'Tompkins, D. N., Radulescu, M., Jagid, N., Portnoy, M., Abii, O., Man, B., Voss, A., LoBue, V., Oakes, L.M., Casasola, M., (2022, April 21-23). The Development and Testing of a Novel Face Controlled Experimental Tool for Toddlers and Young Children [Poster Presentation]. Cognitive Development Society Bi-Ennial Meeting 2022. Madison, WI, United States.',
+    link: ''    
+  },
+  {
+    title: 'Research',
+    description: 'Bambha, V.P., Beckner, A.G., Pochinki, N., Tompkins, D. N., LoBue, V., Oakes, L.M., Casasola, M. (2022, April 2). Putting the Pieces Together: Early spatial problem-solving in the context of puzzle play. [Conference presentation]. SRCD Special Topic Meeting: Learning through Play and Imagination. St. Louis, MO.',
+    link: ''    
+  },
+  {
+    title: 'Research',
+    description: 'Tompkins, D. N., Guevara, V., Portnoy, M., Kushnir, T., & Casasola, M., (2021, April 08). Do Spatial Labels Facilitate Children’s 2D-to-3D Transfer of Relational Information in a Spatial Mapping Task? [Conference presentation]. Society for Research in Child Development, Virtual Conference.',
+    link: ''    
+  },]
+
   return (
     <div className="relative h-screen w-screen overflow-hidden z-20">
-      <CloudContainer clouds={cloudData} />
+      <CloudContainer clouds={cloudData} citations={citations} />
     <Sky />
     <MovingShip imagePath={"/ship.png"} className="left-0"/>
      <Island isMobile={isMobile} />

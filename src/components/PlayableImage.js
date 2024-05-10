@@ -6,13 +6,15 @@ function PlayableImage({isMobile}) {
     const audioRef = useRef(null);
 
     const togglePlay = () => {
-        setSirenImg(sirenImg=='siren.gif' ?'siren_playing.gif':'siren.gif')
+        //setSirenImg(sirenImg=='siren.gif' ?'siren_playing.gif':'siren.gif')
         if (audioRef.current) {
             if (isPlaying) {
                 audioRef.current.pause();
+                setSirenImg('/siren.gif')
             } else {
                 audioRef.current.currentTime = 0; // Start from the beginning
                 audioRef.current.play();
+                setSirenImg('/siren_playing.gif')
             }
             setIsPlaying(!isPlaying);
         }

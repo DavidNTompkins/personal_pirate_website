@@ -46,7 +46,7 @@ const FloatingCloud = ({ title, text, image, explanation, onClick, link, style, 
       )}
       {!isExpanded && (
         <div className="flex items-center justify-center absolute w-full h-full">
-          <span className="text-sm font-medium text-black" style={{ color: 'black !important' }}>{text}</span>
+          <span className="text-sm font-semibold text-black" style={{ color: 'black !important' }}>{text}</span>
         </div>
       )}
     </div>

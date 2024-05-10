@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import FloatingCloud from './FloatingCloud';
+import CitationCloud from './CitationCloud';
 
-const CloudContainer = ({ clouds }) => {
+const CloudContainer = ({ clouds, citations }) => {
     const useMobileDetect = () => {
         const [isMobile, setIsMobile] = useState(false);
       
@@ -69,6 +70,12 @@ const CloudContainer = ({ clouds }) => {
           style={{ top: `${pos.top}%`, left: `${pos.left}%`, transition: 'top 2s, left 2s' }}
         />
       ))}
+      <CitationCloud 
+      cloud ={'/cloud4.png'}
+      citations={citations}
+      style={{ top: isMobile ? `40%`: '50%', left: isMobile ? '5%' :'65%', transition: 'top 2s, left 2s' }}
+      isMobile={isMobile}
+        />
     </div>
   );
 };
