@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Send } from 'lucide-react';
+import Link from 'next/link';  // Assuming you're using Next.js
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
@@ -62,8 +63,10 @@ export default function Chatbot() {
     <div className="flex flex-col h-screen bg-gradient-to-b from-blue-100 to-blue-200">
       <header className="bg-blue-600 text-white p-4">
       <h1 className="text-3xl font-bold">
-  <a href="/" className="hover:underline">Scurvy-chat</a>
-</h1>
+    <Link href="/" className="hover:underline">
+      Yarghbot
+    </Link>
+  </h1>
       </header>
 
       <main className="flex-grow container mx-auto p-4 flex flex-col">
