@@ -1,5 +1,5 @@
 import React from "react";
-import Head from 'next/head';
+import Head from "next/head";
 
 import Ocean from "@/components/Ocean";
 import Sky from "@/components/Sky";
@@ -130,7 +130,7 @@ export default function Home() {
    </div>
    <div style={{ display: 'none' }} aria-hidden="true">
     <h1>David Tompkins</h1>
-    <p>I'm a developmental researcher studying at Cornell. I also like to make things both with and without AI. I'm always looking for people to team up with - send me a note!</p>
+    <p>I am a developmental researcher studying at Cornell. I also like to make things both with and without AI. I'm always looking for people to team up with - send me a note!</p>
   </div>
    </>
   );
