@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head';
 
 import Ocean from "@/components/Ocean";
 import Sky from "@/components/Sky";
@@ -94,6 +95,31 @@ export default function Home() {
   },]
 
   return (
+    <>
+    <Head>
+      <title>David Tompkins</title>
+      <meta name="description" content="Developmental psychology, games, and more" />
+      <meta name="keywords" content="Developmental Psychology, Cornell, Human Development, LLMs, AI, Narrator, Toys" />
+      {/* Open Graph tags for social media sharing */}
+      <meta property="og:title" content="David Tompkins - Personal Website" />
+      <meta property="og:description" content="Developmental Researcher who likes to make things" />
+      {/* Add more meta tags as needed */}
+    </Head>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "David Tompkins",
+      "url": "https://david.tompkins.computer",
+      "sameAs": [
+        "https://twitter.com/davidntompkins",
+        "https://github.com/DavidNTompkins"
+      ]
+    })
+  }}
+/>
     <div className="relative h-screen w-screen overflow-hidden z-20">
       <CloudContainer clouds={cloudData} citations={citations} />
     <Sky />
@@ -102,5 +128,10 @@ export default function Home() {
      <PlayableImage isMobile={isMobile}/>
    <Ocean />
    </div>
+   <div style={{ display: 'none' }} aria-hidden="true">
+    <h1>David Tompkins</h1>
+    <p>I'm a developmental researcher studying at Cornell. I also like to make things both with and without AI. I'm always looking for people to team up with - send me a note!</p>
+  </div>
+   </>
   );
 }
