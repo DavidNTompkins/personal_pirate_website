@@ -43,8 +43,8 @@ export default function Home() {
       text: 'Narrator - AI RPG',
       image: '/narratorBanner2.png',
       cloud: '/cloud.png',
-      explanation: 'Any Story - Any Game. An AI Roleplaying game that supports a variety of LLMs, generates images during each game, and allows for user-generated-content. React frontend, Node Backend.',
-      position: {top: 25, left: 25, mobileTop: 10, mobileLeft: 5 },     
+      explanation: 'Any Story - Any Game. An AI Roleplaying game that supported a variety of LLMs, generates images during each game, and allows for user-generated-content. React frontend, Node Backend.',
+      position: {top: 25, left: 25, mobileTop: 8, mobileLeft: 5 },     
        link: "https://playnarrator.com/"
     },
     {
@@ -53,7 +53,7 @@ export default function Home() {
       image: '/dancingbear_shift.webp',
       cloud: '/cloud2.png',
       explanation: 'Shift that GIF! A GIF-2-GIF pipeline using an animatediff workflow. Powered and supported by fal.ai. Nextjs frontend, Node backend.',
-      position: { top: 35, left: 50, mobileTop: 55, mobileLeft: 35 },      
+      position: { top: 35, left: 50, mobileTop: 53, mobileLeft: 42 },      
       link: "https://gifshift.xyz/"
     },
     {
@@ -62,7 +62,16 @@ export default function Home() {
       image: '/business_dave.png',
       cloud: '/cloud5.png',
       explanation: "I'm always looking for colabs. If you're someone who likes making things (for or not for profit), hit me up! Right now I'm interested in play, toy/game, and using language models to solve useful problems.",
-      position: { top: 45, left: 30, mobileTop: 25, mobileLeft: 45 },      
+      position: { top: 45, left: 30, mobileTop: 23, mobileLeft: 45 },      
+      link: "https://twitter.com/DavidNTompkins"
+    },
+    {
+      title: 'Interests',
+      text: 'Interests',
+      image: 'babytime.png',
+      cloud: '/cloud10.png',
+      explanation: "I'm interested in generalizability over macro time in developmental psychology. To what extent does macro (historical) time limit generalizability of developmental findings? Which portions of the field are the most susceptible to this? My working theory is that intra-personal sensitivity on the developmental timescale might be related to inter-personal sensitivity on the historical timescale. I have a little data to support this - if you're interested, get in touch!",
+      position: { top: 65, left: 43, mobileTop: 65, mobileLeft: 5 },      
       link: "https://twitter.com/DavidNTompkins"
     },
     // Add more cloud data objects

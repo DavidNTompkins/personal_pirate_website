@@ -35,8 +35,13 @@ const FloatingCloud = ({ title, text, image, explanation, onClick, link, style, 
       onClick={() => setIsExpanded(!isExpanded)}
     >
       {isExpanded && (
-        <div className="flex flex-col items-center justify-center bg-white bg-opacity-80 rounded-md p-6 absolute w-full h-full">
-          <img src={image} alt={title} className="w-full max-w-s h-48 rounded-md object-contain mb-3" />
+        <div className="flex flex-col items-center justify-center bg-white bg-opacity-90 rounded-md p-6 absolute w-full h-full">
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-auto max-w-full object-contain mb-3 rounded-md" 
+            style={{ maxHeight: '12rem' }} // This is equivalent to h-48 but won't force smaller images to stretch
+          />
           <h3 className="text-lg text-black font-semibold mb-1">{title}</h3>
           <p className="text-sm text-center text-black">{explanation}</p>
           <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition duration-300">

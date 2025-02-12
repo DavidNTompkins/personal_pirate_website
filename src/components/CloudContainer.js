@@ -73,7 +73,7 @@ const CloudContainer = ({ clouds, citations }) => {
       <CitationCloud 
       cloud ={'/cloud9.png'}
       citations={citations}
-      style={{ top: isMobile ? `40%`: '50%', left: isMobile ? '5%' :'65%', transition: 'top 2s, left 2s' }}
+      style={{ top: isMobile ? `36%`: '50%', left: isMobile ? '5%' :'65%', transition: 'top 2s, left 2s' }}
       isMobile={isMobile}
         />
     </div>
