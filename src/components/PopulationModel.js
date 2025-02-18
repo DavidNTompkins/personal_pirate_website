@@ -394,7 +394,7 @@ const PopulationModel = () => {
                 ref={canvasRef}
                 width={600}
                 height={400}
-                className="border border-gray-200 rounded-lg mb-4 cursor-pointer shadow-inner bg-gray-50"
+                className="border border-gray-200 w-full rounded-lg mb-4 cursor-pointer shadow-inner bg-gray-50"
                 onClick={handleCanvasClick}
             />
 
