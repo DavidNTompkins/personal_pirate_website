@@ -254,7 +254,14 @@ const PopulationModel = () => {
     const handleCanvasClick = (e) => {
         const canvas = canvasRef.current;
         const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left - canvas.width/2;
+        
+        // Calculate the scaling factor
+        const scaleX = canvas.width / rect.width;
+        
+        // Get the click position in scaled canvas coordinates
+        const canvasX = (e.clientX - rect.left) * scaleX;
+        const x = canvasX - canvas.width/2;
+        
         setState(prev => ({
             ...prev,
             startX: x,
