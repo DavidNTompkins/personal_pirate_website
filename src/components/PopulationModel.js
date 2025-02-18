@@ -9,7 +9,7 @@ const PopulationModel = () => {
         b: 0.1,
         meanSystemicIntervention: 0,
         sdSystemicIntervention: 1,
-        individualBoost: 0,
+        individualBoost: 2,
         running: true,
         damping: 0.98,
         numParticles: 50,
@@ -323,7 +323,7 @@ const PopulationModel = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
             <div className="mb-4 space-y-2">
                 <div className="flex space-x-2 mb-4">
                     <button
