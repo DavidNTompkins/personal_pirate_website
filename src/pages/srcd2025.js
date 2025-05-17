@@ -12,7 +12,7 @@ import KeywordSearch from '../components/srcd/KeywordSearch';
 import NearestNeighbors from '../components/srcd/NearestNeighbors';
 
 // API URL - replace with your actual API URL
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://api.tompkins.computer';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.tompkins.computer';
 
 export default function PosterExplorer() {
   // State
