@@ -1,0 +1,60 @@
+/* styles/TSNEVisualization.module.css */
+
+.tsneContainer {
+  margin-bottom: 1.5rem;
+}
+
+.visualizationInfo {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.plotContainer {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #e74c3c;
+  background-color: #fdf3f2;
+  border-radius: 8px;
+  border: 1px solid #f5b7b1;
+}
+
+.hoverInfo {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  z-index: 10;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.posterNumber {
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 0.25rem;
+}
+
+.posterTitle {
+  font-size: 0.9rem;
+  color: #333;
+}

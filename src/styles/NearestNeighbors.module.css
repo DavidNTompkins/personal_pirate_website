@@ -1,0 +1,65 @@
+/* styles/NearestNeighbors.module.css */
+
+.neighborsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.neighborItem {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.neighborItem:last-child {
+  border-bottom: none;
+}
+
+.neighborItem:hover {
+  background-color: #f5f5f5;
+}
+
+.neighborHeader {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.posterNumber {
+  font-weight: bold;
+  color: #3498db;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.posterTitle {
+  font-weight: 500;
+  color: #333;
+}
+
+.posterAuthors {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.noNeighbors {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
